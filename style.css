@@ -4,20 +4,20 @@ body {
     font-weight: weight;
     font-style: normal;
     color: #4A4A4A;
-    background:#ede3fc ;
-    background: linear-gradient(90deg, rgba(163,206,241,1) 0%, rgba(196,163,241,1) 57%);
+    background: #ede3fc;
+    background: linear-gradient(90deg, rgba(163, 206, 241, 1) 0%, rgba(196, 163, 241, 1) 57%);
 
 }
 
 .main-container {
-    margin: 0 auto ;
+    margin: 0 auto;
     max-width: 100%;
     width: 55%;
     display: flex;
     justify-content: center;
     margin-top: 120px;
     border-radius: 30px;
-    box-shadow: 5px 5px 15px ;
+    box-shadow: 5px 5px 15px;
 
 }
 
@@ -28,49 +28,98 @@ body {
     justify-content: center;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.61);
-    border-radius: 30px 0px 0px 30px ;
+    border-radius: 30px 0px 0px 30px;
 
 }
-.Login{
+
+.Login {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
 }
-input{
+
+.con-UR {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+
+
+}
+
+select {
     border: none;
-    background-color:rgba(255, 255, 255, 0.979);
+    background-color: rgba(255, 255, 255, 0.979);
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 12px #4A4A4A;
+    width: 165px;
+}
+
+input {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.979);
     height: 25px;
     border-radius: 5px;
-    box-shadow: 3px 3px 12px   #4A4A4A;
-    
+    box-shadow: 3px 3px 12px #4A4A4A;
+
 }
-button{
+
+button {
     text-align: center;
     padding: 6px 27px;
     border-radius: 5px;
     border: none;
     color: #F1F1F1;
     /* font-weight: 700; */
-    background:#C4A3F1;
+    background: #b585f8;
     box-shadow: 3px 3px 12px rgb(88, 88, 88);
-
+    cursor: pointer;
 }
 
-.lab-inp{
+button:hover {
+    background-color: #ac74fc;
+    padding: 10px 30px;
+    box-shadow: 5px 5px 15px rgb(75, 75, 75);
+}
+
+.skill-pop {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.979);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 10px 13px 32px rgb(88, 88, 88);
+    /* text-align: center; */
+}
+
+.skill-pop input {
+    background-color: none;
+    height: auto;
+}
+
+.skill-pop td {
+    width: 150px;
+    padding: 10px;
+}
+
+.lab-inp {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
+
 }
 
 
 .UR-login-img {
     width: 50%;
-    border-radius: 0px 30px 30px 0px ;
+    border-radius: 0px 30px 30px 0px;
 }
 
 .UR-login-img img {
     width: 100%;
-    border-radius: 0px 30px 30px 0px ;
+    border-radius: 0px 30px 30px 0px;
 }

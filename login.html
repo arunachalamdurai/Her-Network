@@ -31,7 +31,7 @@
         <div class="UR-login">
 
             <!-- User Registration -->
-            <div class="con-UR" id="regi">
+            <div class="con-UR" id="regi" style="display: none;">
 
                 <h1 style="margin: 0px;">User Registration</h1>
 
@@ -44,7 +44,14 @@
                             <td>
                                 <input type="text" id="Uname" name="Uname" value="" required>
                             </td>
+
                         </tr>
+                        <tr>
+                            <td>
+                                <br>
+                            </td>
+                        </tr>
+
 
                         <tr>
                             <td>
@@ -52,6 +59,11 @@
                             </td>
                             <td>
                                 <input type="email" id="Uemail" name="Uemail" value="" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <br>
                             </td>
                         </tr>
 
@@ -64,56 +76,13 @@
                                     <option value="" disabled selected>Choose...</option>
                                     <option value="Housewife">Housewife</option>
                                     <option value="Working Woman">Working Woman</option>
-                                    <option value="Student">Working Woman</option>
+                                    <option value="Student">Student</option>
                                 </select>
                             </td>
                         </tr>
-
-                        <tr id="skillsContainer" style="display:none;">
-                            <tr>
-                                <td>
-                                    <h3>Select Your Skills:</h3>
-                                </td>
-                                
-                            </tr>
+                        <tr>
                             <td>
-                                <table>
-                                    <tr>
-                                        <td class="skill-checkbox">
-                                            <input type="checkbox" id="cooking" name="skills" value="Cooking">
-                                            <label for="cooking">Cooking</label>
-                                        </td>
-
-                                        <td class="skill-checkbox">
-                                            <input type="checkbox" id="childcare" name="skills" value="Childcare">
-                                            <label for="childcare">Childcare</label>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" id="cleaning" name="skills" value="Cleaning">
-                                            <label for="cleaning">Cleaning</label>
-                                        </td>
-
-                                        <td>
-                                            <input type="checkbox" id="teaching" name="skills" value="Teaching">
-                                            <label for="teaching">Teaching</label>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>
-                                            <input type="checkbox" id="baking" name="skills" value="Baking">
-                                            <label for="baking">Baking</label>
-                                        </td>
-                                        <td>
-                                        <input type="checkbox" id="project-management" name="skills"value="Project Management">
-                                        <label for="project-management">Project Management</label>
-                                    </td>
-                                    </tr>
-
-                                </table>
+                                <br>
                             </td>
                         </tr>
 
@@ -125,6 +94,11 @@
                                 <input type="password" id="Upsw" name="Upsw" value="" required>
                             </td>
                         </tr>
+                        <tr>
+                            <td>
+                                <br>
+                            </td>
+                        </tr>
 
                         <tr>
                             <td>
@@ -134,22 +108,19 @@
                                 <input type="Password" id="UCpsw" name="UCpsw" value="" required><br>
                             </td>
                         </tr>
-                        <tr>
-                            <td>
-                                <button>Submit</button>
-                            </td>
-                        </tr>
                     </table>
 
-
                 </form>
+                <div style="text-align:center; margin-top:20px;">
+                    <button onclick="showwellpg()"><b>Submit</b></button>
+                </div>
             </div>
 
             <!-- Login Page -->
             <div class="Login" id="log" style="display: none;">
                 <h1 style="margin: 0px;">LOGIN</h1>
 
-                <table>
+                <table style="margin-top: 10px;">
                     <tr>
                         <td>
                             <label for="email">Email</label>
@@ -173,14 +144,19 @@
                     </tr>
                 </table>
 
-                <div>
-                    <button>LOGIN</button>
+                <div style="text-align: center; margin: 20px 0px;">
+                    <button><b>LOGIN</b></button>
                 </div>
 
-                <div>
-                    <button onclick="showResister()">Create Account</button>
+                <div style="text-align: center;">
+                    <button onclick="showResister()"><b>Create Account</b></button>
                 </div>
 
+            </div>
+            <!-- wellcome Page -->
+            <div id="well-pg" style="text-align: center;">
+                <h2>Welcome Back....</h2>
+                <button onclick="showlogin()"><b>Login</b></button>
             </div>
             <!-- forget password -->
 
@@ -189,9 +165,73 @@
         <div class="UR-login-img">
             <img src="/Assets/login and register tem-img.png" alt="">
         </div>
+    </div>
 
+
+    <div class="skill-pop" id="skillsContainer" ">
+
+        <tr>
+        <tr>
+            <td>
+                <h3>Select Your Skills:</h3>
+            </td>
+
+        </tr>
+        <td>
+            <table>
+                <tr>
+                    <td class="skill-checkbox">
+                        <input type="checkbox" id="cooking" name="skills" value="Cooking">
+                        <label for="cooking">Cooking</label>
+                    </td>
+
+                    <td class="skill-checkbox">
+                        <input type="checkbox" id="childcare" name="skills" value="Childcare">
+                        <label for="childcare">Childcare</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" id="cleaning" name="skills" value="Cleaning">
+                        <label for="cleaning">Cleaning</label>
+                    </td>
+
+                    <td>
+                        <input type="checkbox" id="teaching" name="skills" value="Teaching">
+                        <label for="teaching">Teaching</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type="checkbox" id="baking" name="skills" value="Baking">
+                        <label for="baking">Baking</label>
+                    </td>
+                    <td>
+                        <input type="checkbox" id="project-management" name="skills" value="Project Management">
+                        <label for="project-management">Project Management</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: center;">
+                        <input type="checkbox" id="companion" name="skills" value="companion">
+                        <label for="companion">Companion</label>
+                    </td>
+                </tr>
+            </table>
+        </td>
+        </tr>
+        <br>
+        <div>
+            <button onclick="closeSkil()">Done</button>
+        </div>
+        
 
     </div>
+
+
 </body>
 
 </html>
