@@ -31,7 +31,7 @@
         <div class="UR-login">
 
             <!-- User Registration -->
-            <div class="con-UR" >
+            <div class="con-UR" id="regi" style="display: none;">
                 <form action="" method="post">
                     <label for="Uname">Name:</label><br>
                     <input type="text" id="Uname" name="Uname" value="" required><br>
@@ -86,17 +86,26 @@
             </div>
 
             <!-- Login Page -->
-            <div class="Login">
-
+            <div class="Login" id="log">
+                <label for="email">email:</label><br>
+                <input type="email" id="Uemail" name="Uemail" value="" required><br>
+                <label for="Upsw">Password:</label><br>
+                <input type="password" id="Upsw" name="Upsw" value="" required><br>
+                <input type="checkbox" id="show-password" name="show" value="show password">
+                <label for="UCpsw">show password</label><br>
+                <input type="submit" value="Submit"><br>
+                <button onclick="showResister()">create Account</button>
             </div>
+            <!-- forget password -->
+
 
         </div>
         <div class="UR-login-img">
             <img src="" alt="">
         </div>
 
-    </div>
 
+    </div>
 </body>
 
 </html>
