@@ -1,11 +1,11 @@
 function showResister() {
     const regi = document.getElementById('regi');
     const log = document.getElementById('log');
+    const wellcm = document.getElementById("well-pg");
 
     regi.style.display = 'block';
-
+    wellcm.style.display = "none";
     log.style.display = 'none';
-
 }
 
 function showlogin() {

@@ -39,7 +39,7 @@
                     <table>
                         <tr>
                             <td>
-                                <label for="Uname">Name:</label>
+                                <label for="Uname">Name</label>
                             </td>
                             <td>
                                 <input type="text" id="Uname" name="Uname" value="" required>
@@ -55,7 +55,7 @@
 
                         <tr>
                             <td>
-                                <label for="Uemail">email:</label>
+                                <label for="Uemail">email</label>
                             </td>
                             <td>
                                 <input type="email" id="Uemail" name="Uemail" value="" required>
@@ -69,7 +69,7 @@
 
                         <tr>
                             <td>
-                                <label for="role">Select Your Role:</label>
+                                <label for="role">Select Your Role</label>
                             </td>
                             <td>
                                 <select id="role" name="role" onchange="showSkillsInput()" required>
@@ -88,7 +88,7 @@
 
                         <tr>
                             <td>
-                                <label for="Upsw">Password:</label>
+                                <label for="Upsw">Password</label>
                             </td>
                             <td>
                                 <input type="password" id="Upsw" name="Upsw" value="" required>
@@ -102,7 +102,7 @@
 
                         <tr>
                             <td>
-                                <label for="UCpsw">Confirm Password:</label><br>
+                                <label for="UCpsw">Confirm Password</label><br>
                             </td>
                             <td>
                                 <input type="Password" id="UCpsw" name="UCpsw" value="" required><br>
@@ -117,7 +117,7 @@
             </div>
 
             <!-- Login Page -->
-            <div class="Login" id="log" style="display: none;">
+            <div class="Login" id="log">
                 <h1 style="margin: 0px;">LOGIN</h1>
 
                 <table style="margin-top: 10px;">
@@ -154,7 +154,7 @@
 
             </div>
             <!-- wellcome Page -->
-            <div id="well-pg" style="text-align: center;">
+            <div id="well-pg" style="text-align: center; display: none;">
                 <h2>Welcome Back....</h2>
                 <button onclick="showlogin()"><b>Login</b></button>
             </div>
@@ -168,7 +168,7 @@
     </div>
 
 
-    <div class="skill-pop" id="skillsContainer" ">
+    <div class="skill-pop" id="skillsContainer" style="display: none;">
 
         <tr>
         <tr>
@@ -213,18 +213,21 @@
                         <label for="project-management">Project Management</label>
                     </td>
                 </tr>
-
                 <tr>
-                    <td style="text-align: center;">
+                    <td >
                         <input type="checkbox" id="companion" name="skills" value="companion">
                         <label for="companion">Companion</label>
                     </td>
+                    
                 </tr>
             </table>
         </td>
         </tr>
         <br>
-        <div>
+            
+        <div style="text-align: center;">
+            <label for="project-management">Other Skills</label>
+            <input type="text" id="project-management" name="skills" value="" style=" height: 25px; margin-bottom: 20px;"><br>
             <button onclick="closeSkil()">Done</button>
         </div>
         
