@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,18 +10,22 @@
     <!-- google-fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
 
     <!-- style-sheet -->
     <link rel="stylesheet" href="/style.css">
 
     <!-- script -->
-     <link rel="script" href="/script.js">
+    <link rel="script" href="/script.js">
+
 
 </head>
+
 <body>
     <!-- User Registration/Login Page -->
-     <div class="main-container">
+    <div class="main-container">
 
         <!-- User Registration -->
         <div class="con-UR">
@@ -29,27 +34,80 @@
                 <input type="text" id="Uname" name="Uname" value="" required><br>
                 <label for="Uemail">email:</label><br>
                 <input type="email" id="Uemail" name="Uemail" value="" required><br>
-                <label for="Urole">Role:</label  required><br>
-                <label for="Urole">Housewife</label>
-                <input type="radio" id="role-Housewife" name="Urole" value="">
-                <label for="Urole">Student</label>
-                <input type="radio" id="role-Student" name="Urole" value="">
-                <label for="Urole">Working Woman</label>
-                <input type="radio" id="role-WorkingWoman" name="Urole" value=""><br>
+                
+
+                <label for="role">Select Your Role:</label><br>
+                <select id="role" name="role" onchange="showSkillsInput()" required>
+                    <option value="" disabled selected>Choose...</option>
+                    <option value="Housewife">Housewife</option>
+                    <option value="Working Woman">Working Woman</option>
+                    <option value="Student">Working Woman</option>
+                </select><br><br>
+            
+                <div id="skillsContainer" style="display:none;">
+                    <label>Select Your Skills:</label><br>
+                    <div class="skill-checkbox">
+                        <input type="checkbox" id="cooking" name="skills" value="Cooking">
+                        <label for="cooking">Cooking</label>
+                    </div>
+                    <div class="skill-checkbox">
+                        <input type="checkbox" id="childcare" name="skills" value="Childcare">
+                        <label for="childcare">Childcare</label>
+                    </div>
+                    <div class="skill-checkbox">
+                        <input type="checkbox" id="cleaning" name="skills" value="Cleaning">
+                        <label for="cleaning">Cleaning</label>
+                    </div>
+                    <div class="skill-checkbox">
+                        <input type="checkbox" id="teaching" name="skills" value="Teaching">
+                        <label for="teaching">Teaching</label>
+                    </div>
+                    <div class="skill-checkbox">
+                        <input type="checkbox" id="baking" name="skills" value="Baking">
+                        <label for="baking">Baking</label>
+                    </div>
+                    <div class="skill-checkbox">
+                        <input type="checkbox" id="project-management" name="skills" value="Project Management">
+                        <label for="project-management">Project Management</label>
+                    </div>
+                </div>
+
+
+
                 <label for="Upsw">Password:</label><br>
                 <input type="password" id="Upsw" name="Upsw" value="" required><br>
                 <label for="UCpsw">Confirm Password:</label><br>
                 <input type="Password" id="UCpsw" name="UCpsw" value="" required><br>
                 <input type="submit" value="Submit">
-              </form> 
+            </form>
         </div>
 
         <!-- Login Page -->
-         <div class="Login" style="display: none;">
+        <div class="Login" style="display: none;">
 
-         </div>
+        </div>
 
-     </div>
-    
+    </div>
+
+    <script>
+        function showSkillsInput() {
+            const roleSelect = document.getElementById('role');
+            const skillsContainer = document.getElementById('skillsContainer');
+
+            // Show skills input if "Working Woman" is selected
+            if (roleSelect.value === "Housewife") {
+                skillsContainer.style.display = 'block';
+            } else {
+                skillsContainer.style.display = 'none';
+            }
+        }
+    </script>
+
+
+
+
+
+
 </body>
+
 </html>
