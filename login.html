@@ -10,9 +10,9 @@
     <!-- google-fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap"
         rel="stylesheet">
+
 
     <!-- style-sheet -->
     <link rel="stylesheet" href="/style.css">
@@ -31,77 +31,146 @@
         <div class="UR-login">
 
             <!-- User Registration -->
-            <div class="con-UR" id="regi" style="display: none;">
+            <div class="con-UR" id="regi">
+
+                <h1 style="margin: 0px;">User Registration</h1>
+
                 <form action="" method="post">
-                    <label for="Uname">Name:</label><br>
-                    <input type="text" id="Uname" name="Uname" value="" required><br>
-                    <label for="Uemail">email:</label><br>
-                    <input type="email" id="Uemail" name="Uemail" value="" required><br>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="Uname">Name:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="Uname" name="Uname" value="" required>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="Uemail">email:</label>
+                            </td>
+                            <td>
+                                <input type="email" id="Uemail" name="Uemail" value="" required>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="role">Select Your Role:</label>
+                            </td>
+                            <td>
+                                <select id="role" name="role" onchange="showSkillsInput()" required>
+                                    <option value="" disabled selected>Choose...</option>
+                                    <option value="Housewife">Housewife</option>
+                                    <option value="Working Woman">Working Woman</option>
+                                    <option value="Student">Working Woman</option>
+                                </select>
+                            </td>
+                        </tr>
+
+                        <tr id="skillsContainer" style="display:none;">
+                            <td>
+                                <label>Select Your Skills:</label>
+                                <div class="skill-checkbox">
+                                    <input type="checkbox" id="cooking" name="skills" value="Cooking">
+                                    <label for="cooking">Cooking</label>
+                                </div>
+                                <div class="skill-checkbox">
+                                    <input type="checkbox" id="childcare" name="skills" value="Childcare">
+                                    <label for="childcare">Childcare</label>
+                                </div>
+                                <div class="skill-checkbox">
+                                    <input type="checkbox" id="cleaning" name="skills" value="Cleaning">
+                                    <label for="cleaning">Cleaning</label>
+                                </div>
+                                <div class="skill-checkbox">
+                                    <input type="checkbox" id="teaching" name="skills" value="Teaching">
+                                    <label for="teaching">Teaching</label>
+                                </div>
+                                <div class="skill-checkbox">
+                                    <input type="checkbox" id="baking" name="skills" value="Baking">
+                                    <label for="baking">Baking</label>
+                                </div>
+                                <div class="skill-checkbox">
+                                    <input type="checkbox" id="project-management" name="skills"
+                                        value="Project Management">
+                                    <label for="project-management">Project Management</label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="Upsw">Password:</label>
+                            </td>
+                            <td>
+                                <input type="password" id="Upsw" name="Upsw" value="" required>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <label for="UCpsw">Confirm Password:</label><br>
+                            </td>
+                            <td>
+                                <input type="Password" id="UCpsw" name="UCpsw" value="" required><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button>Submit</button>
+                            </td>
+                        </tr>
+                    </table>
 
 
-                    <label for="role">Select Your Role:</label><br>
-                    <select id="role" name="role" onchange="showSkillsInput()" required>
-                        <option value="" disabled selected>Choose...</option>
-                        <option value="Housewife">Housewife</option>
-                        <option value="Working Woman">Working Woman</option>
-                        <option value="Student">Working Woman</option>
-                    </select><br><br>
-
-                    <div id="skillsContainer" style="display:none;">
-                        <label>Select Your Skills:</label><br>
-                        <div class="skill-checkbox">
-                            <input type="checkbox" id="cooking" name="skills" value="Cooking">
-                            <label for="cooking">Cooking</label>
-                        </div>
-                        <div class="skill-checkbox">
-                            <input type="checkbox" id="childcare" name="skills" value="Childcare">
-                            <label for="childcare">Childcare</label>
-                        </div>
-                        <div class="skill-checkbox">
-                            <input type="checkbox" id="cleaning" name="skills" value="Cleaning">
-                            <label for="cleaning">Cleaning</label>
-                        </div>
-                        <div class="skill-checkbox">
-                            <input type="checkbox" id="teaching" name="skills" value="Teaching">
-                            <label for="teaching">Teaching</label>
-                        </div>
-                        <div class="skill-checkbox">
-                            <input type="checkbox" id="baking" name="skills" value="Baking">
-                            <label for="baking">Baking</label>
-                        </div>
-                        <div class="skill-checkbox">
-                            <input type="checkbox" id="project-management" name="skills" value="Project Management">
-                            <label for="project-management">Project Management</label>
-                        </div>
-                    </div>
-
-
-
-                    <label for="Upsw">Password:</label><br>
-                    <input type="password" id="Upsw" name="Upsw" value="" required><br>
-                    <label for="UCpsw">Confirm Password:</label><br>
-                    <input type="Password" id="UCpsw" name="UCpsw" value="" required><br>
-                    <input type="submit" value="Submit">
                 </form>
             </div>
 
             <!-- Login Page -->
-            <div class="Login" id="log">
-                <label for="email">email:</label><br>
-                <input type="email" id="Uemail" name="Uemail" value="" required><br>
-                <label for="Upsw">Password:</label><br>
-                <input type="password" id="Upsw" name="Upsw" value="" required><br>
-                <input type="checkbox" id="show-password" name="show" value="show password">
-                <label for="UCpsw">show password</label><br>
-                <input type="submit" value="Submit"><br>
-                <button onclick="showResister()">create Account</button>
+            <div class="Login" id="log" style="display: none;">
+                <h1 style="margin: 0px;">LOGIN</h1>
+
+                <table>
+                    <tr>
+                        <td>
+                            <label for="email">Email</label>
+                        </td>
+                        <td>
+                            <input type="email" id="Uemail" name="Uemail" value="" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="Upsw">Password</label>
+                        </td>
+                        <td>
+                            <input type="password" id="Upsw" name="Upsw" value="" required>
+                        </td>
+                    </tr>
+                </table>
+
+                <div>
+                    <button>LOGIN</button>
+                </div>
+
+                <div>
+                    <button onclick="showResister()">Create Account</button>
+                </div>
+
             </div>
             <!-- forget password -->
 
 
         </div>
         <div class="UR-login-img">
-            <img src="" alt="">
+            <img src="/Assets/login and register tem-img.png" alt="">
         </div>
 
 
