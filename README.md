@@ -1,0 +1,4 @@
+# Her-Network
+A *platform designed to connect housewives and working women* to help each other by addressing everyday challenges. Working women often struggle to balance their careers with household responsibilities like *childcare, cooking, and cleaning. On the other hand, many housewives possess valuable skills—such as **childcare, cooking, creative arts and professional tutor*—but lack opportunities to earn or grow professionally due to personal constraints.  
+
+This platform aims to *bridge these gaps by fostering collaboration. Working women can outsource specific tasks or services (like cooking or childcare or professional tutor) to housewives, while housewives gain the opportunity to **use their skills productively, earn income, and build financial independence. Through **mutual support and connection, both groups can enhance their personal and professional lives, creating a **community-driven ecosystem of empowerment and assistance*.
