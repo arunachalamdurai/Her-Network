@@ -1403,6 +1403,7 @@ h3 {
   .tasker-main-container {
     width: 100%;
     margin: 0 auto;
+    left: 0px;
   }
 
   .nav-other #ser-nav-icon {
